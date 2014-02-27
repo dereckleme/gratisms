@@ -1,0 +1,137 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Common
+[Installer_Config]
+AppID=HWAPI
+Shared=1
+
+[Version]
+Signature="$Chicago$"
+AdvancedINF=2.5
+LayoutFile=hwapi.inf
+
+[SourceDisksNames]
+1="McAfee HackerWatch Program Files","",1
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; DirIds
+
+;Env-Var Defined ==> Program Files
+;33100 ==> All Users\Application Data
+;33000 ==> Program Files\Common files
+;33200 ==> McIns.exe Module dir
+;33300 ==> ExtractCAB location
+[DirIds]
+49000=%33000%\McAfee\HackerWatch
+49010=%33100%\McAfee\HackerWatch\data
+49020=%33100%\McAfee\HackerWatch
+
+49001=%CommonProgramW6432%\McAfee\HackerWatch
+
+[DestinationDirs]   
+HWAPI=49000
+HWAPI_Data=49010
+HWAPI64=49001
+SQLite_Journal=49010
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Shared
+[OCXRegister]
+;hwapiPS.dll
+HWAPI.dll
+
+[HWAPI_Data]
+HwLocal.xdb,,,0x10004
+
+;sqlite journal file needs to be deleted first if there is any, other wise the data base may corrupt
+[SQLite_Journal]
+HwLocal.xdb-journal,,,0x10004
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; 32 Bits
+
+[Install_NT]
+DefaultInstall_NT=Setup
+
+[UnInstall_NT]
+DefaultUninstall_NT=Setup
+Cleanup=Delfolders
+
+
+[DefaultInstall_NT]
+Delfiles=SQLite_Journal
+CopyFiles=HWAPI, HWAPI_Data
+AddReg=HWAPIRegistry
+
+[DefaultUninstall_NT]
+Delfiles=HWAPI, HWAPI_Data
+DelReg=HWAPIRegistry, HWAPIRegistry_Uninstall
+
+[Cleanup]
+%49010%=1
+%49020%=1
+%49000%=1
+
+
+[HWAPI]
+;HWAPIPS.dll,,,0x10020
+HWAPI.dll,,,0x10020
+hwapi.inf,,,0x10004
+hwupdchk.exe,,,0x10020
+
+
+[HWAPIRegistry]
+HKLM,Software\McAfee\HackerWatch
+HKLM,Software\McAfee\HackerWatch,"Install Dir",,%49000%
+HKLM,Software\McAfee\HackerWatch,Install Build,,12.6.113.0
+HKLM,Software\McAfee\HackerWatch\Plugins,,,
+HKLM,Software\McAfee\MSC\Update\Customization\{6021CE48-B556-4f11-BC68-A647F056F8CC},,,
+
+[HWAPIRegistry_Uninstall]
+HKLM,Software\McAfee\HackerWatch,,,
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; 64 Bits
+
+[Install_Vista_X64]
+DefaultInstall_Vista_X64=Setup
+
+[UnInstall_Vista_X64]
+DefaultUnInstall_Vista_X64=Setup
+Cleanup64=Delfolders
+
+
+[DefaultInstall_Vista_X64]
+Delfiles=SQLite_Journal
+CopyFiles=HWAPI64, HWAPI_Data
+AddReg=HWAPIRegistry64
+
+[DefaultUnInstall_Vista_X64]
+Delfiles=HWAPI64, HWAPI_Data
+DelReg=HWAPIRegistry64, HWAPIRegistry_Uninstall64
+
+[Cleanup64]
+%49010%=1
+%49020%=1
+%49001%=1
+
+
+[HWAPI64]
+;HWAPIPS.dll,,,0x10020
+HWAPI.dll,,,0x10020
+hwapi.inf,,,0x10004
+hwupdchk.exe,,,0x10020
+
+
+[HWAPIRegistry64]
+HKLM,Software\McAfee\HackerWatch,"Install Dir",0x1000,%49001%
+HKLM,Software\McAfee\HackerWatch,Install Build,,12.6.113.0
+HKLM,Software\McAfee\HackerWatch,Install Build,0x1000,12.6.113.0
+HKLM,Software\McAfee\HackerWatch\Plugins,,0x3000,
+HKLM,Software\McAfee\MSC\Update\Customization\{6021CE48-B556-4f11-BC68-A647F056F8CC},,0x3000,
+
+[HWAPIRegistry_Uninstall64]
+HKLM,Software\McAfee\HackerWatch,,0x3000,
+
+

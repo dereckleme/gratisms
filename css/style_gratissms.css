@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+
+body { background:url(../images/fundo.png) repeat-x  #016972 ; font-family:Arial, Helvetica, sans-serif; font-size:13px; margin:0 auto;}
+img {border:none;}
+p.publicidade_topo { border:1px #ddd solid; padding:5px 5px 5px 5px; margin: 30px 0 0 0; float:left;}
+p.publicidade { border:1px #ddd solid; padding:5px 5px 5px 5px; margin: 0px 0 0 0;}
+#general { margin:7px auto; width: 1100px;}
+#content { float:left; margin:14px 0 0 0;}
+#nav{ width:780px; float:left;}
+a.logo{ margin: 0 0 0 -20px; float:left; }
+#left { float:left; width:370px; margin: -30px 0 0 0;}
+#center{ float:left; width:370px; margin: -30px 0 0 0; }
+#right { float:right; margin: -30px 0 0 30px; }
+
+
+/*menu*/
+#menu  { padding-bottom:55px;}
+#menu ul { list-style:none;  margin: 2px 0 0 0; float:right; }
+#menu ul li {float:left;}
+#menu ul li a{ text-decoration:none; font-size:11px; color:#FFF; text-transform:uppercase; margin: 0 20px 0 0;}
+#menu ul li a:hover { color:#d2b517;}
+
+/*menu principal*/
+ul.menu_principal{ float:left; margin: 10px 0 0 20px; }
+ul.menu_principal li {list-style:none; float:left;}
+ul.menu_principal li a { text-decoration:none; color:#FFF; text-transform:uppercase; font-size:11px; float:left;}
+ul.menu_principal li a.home { background:url(../images/home.png) no-repeat top; padding: 70px 20px 0 20px; margin: 10px 30px 0 0;}
+ul.menu_principal li a.termos_uso { background:url(../images/termos_uso.png) no-repeat top; padding: 70px 20px 0 20px; margin: 10px 20px 0 0;}
+ul.menu_principal li a:hover.home { background:url(../images/home_hover.png) no-repeat top; color:#d2b517;}
+ul.menu_principal li a:hover.termos_uso{ background:url(../images/termos_uso_hover.png) no-repeat top; color:#d2b517;} 
+ul.menu_principal li a.facebook{ background:url(../images/facebook.png) no-repeat top; padding: 70px 20px 0 20px; margin: 10px 0 0 0;}
+ul.menu_principal li a:hover.facebook{ background:url(../images/facebook_hover.png) no-repeat top; color:#d2b517;} 
+/*style formularios*/
+h2.subtitulo { color:#FFF; text-transform:uppercase; font-size:15px; font-weight:normal; margin: 10px 0 20px 0;}
+form.status_formulario { width:357px;}
+input, label, textarea, select{  color:#016972; border:none; margin: 0 0 0 0;}
+input { padding:10px 10px 10px 10px;}
+input.status_num_destino { width:164px;}
+input.status_nome { width:216px; margin: 0 0 10px 0;}
+input.status_numero { width:112px;}
+label { color:#FFF; margin: 10px 0 0 0; float:left;  }
+select {padding:9px 10px 9px 10px; }
+select.status_ddd{ width:100px;}
+textarea {  padding:10px 10px 10px 10px; width:268px; height:95px; margin:10px 0 0 0; font-family:Arial, Helvetica, sans-serif; font-size:13px;} 
+button.btn_enviar { background:#d2b517; text-transform:uppercase; border-radius:15px 0 0 15px; cursor:pointer; border:none; color:#000; font-size:16px;  padding: 16px 90px 16px 20px; margin:15px 0 0 0; text-align:left; }
+button:hover.btn_enviar {background:#000; color:#FFF;}
+img.img_enviar { position:absolute; margin: 65px 0 0 195px;}
+p.atencao { background:url(../images/atencao.png) no-repeat left; color:#111; line-height:18px;  font-family:Arial, Helvetica, sans-serif; font-size:13px; padding: 0 0 0 35px; width:230px;}
+
+
+/*rodape*/
+p.direitos_reservados { margin: 30px 0 0 0; float:right; color:#FFF; font-size:12px;}
+#menu_footer  { padding-bottom:55px;}
+#menu_footer ul { list-style:none;  margin: 30px 0 20px -40px; float:left;  }
+#menu_footer ul li { margin: 5px 0 0 0; font-size:14px; color:#FFF; text-transform:uppercase;}
+#menu_footer ul li a{ text-decoration:none; font-size:11px; color:#FFF; text-transform:uppercase; margin: 0 20px 0 0;}
+#menu_footer ul li a:hover { color:#d2b517;}

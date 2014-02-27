@@ -1,0 +1,886 @@
+@.¢í±,ï6Å€ÍjYE≈≠‡©∑L‚	ÁÙW20E˛<?xml version="1.0" encoding="utf-8"?>
+<uiconfig version="2.0">
+	<!-- This is font info for Win32 UI, ie. the network map (does not apply to HTML UI) -->
+	<nmc_main>
+		<en-us>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</en-us>
+		<en-au>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</en-au>
+		<en-ca>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</en-ca>
+		<en-gb>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</en-gb>
+		<cs>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</cs>
+		<da>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</da>
+		<de>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</de>
+		<es-mx>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</es-mx>
+		<es>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</es>
+		<fi>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</fi>
+		<fr>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</fr>
+		<fr-ca>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</fr-ca>
+		<it>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</it>
+		<ja>
+			<font face_name="MS PGothic" point_size="8" codepage="932"/>
+		</ja>
+		<jp>
+			<font face_name="MS PGothic" point_size="8" codepage="932"/>
+		</jp>
+		<ko>
+			<font face_name="Gulim" point_size="8" codepage="949"/>
+		</ko>
+		<nl>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</nl>
+		<no>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</no>
+		<pl>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</pl>
+		<pt>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</pt>
+		<pt-br>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</pt-br>
+		<sv>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</sv>
+		<tr>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</tr>
+		<xx-db>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</xx-db>
+		<xx-sb>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</xx-sb>
+		<zh-cn>
+			<font face_name="ÂÆã‰Ωì" point_size="9" codepage="936"/>
+		</zh-cn>
+		<!-- Simplified Chinese for PRC, Singapore-->
+		<zh-tw>
+			<font face_name="Êñ∞Á¥∞ÊòéÈ´î" point_size="9" codepage="950"/>
+		</zh-tw>
+		<!-- Traditional Chinese for Taiwan, HongKong SAR, PRC-->
+		<ru>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</ru>
+		<sk>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</sk>
+		<hu>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</hu>
+		<el>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</el>
+		<gr>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</gr>
+		<hr>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</hr>
+		<sr>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</sr>
+		<he>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</he>
+		<ar-AE>
+			<font face_name="arial" point_size="8" codepage="1252"/>
+		</ar-AE>
+	</nmc_main>
+	<nmc_rename_network_dlg>
+		<en-us>
+			<mainframe width="400" height="200"/>
+		</en-us>
+		<en-au>
+			<mainframe width="400" height="200"/>
+		</en-au>
+		<en-ca>
+			<mainframe width="400" height="200"/>
+		</en-ca>
+		<en-gb>
+			<mainframe width="400" height="200"/>
+		</en-gb>
+		<cs>
+			<mainframe width="400" height="200"/>
+		</cs>
+		<da>
+			<mainframe width="400" height="200"/>
+		</da>
+		<de>
+			<mainframe width="400" height="200"/>
+		</de>
+		<es-mx>
+			<mainframe width="400" height="200"/>
+		</es-mx>
+		<es>
+			<mainframe width="400" height="200"/>
+		</es>
+		<fi>
+			<mainframe width="400" height="200"/>
+		</fi>
+		<fr>
+			<mainframe width="400" height="200"/>
+		</fr>
+		<fr-ca>
+			<mainframe width="400" height="200"/>
+		</fr-ca>
+		<it>
+			<mainframe width="400" height="200"/>
+		</it>
+		<ja>
+			<mainframe width="400" height="200"/>
+		</ja>
+		<jp>
+			<mainframe width="400" height="200"/>
+		</jp>
+		<ko>
+			<mainframe width="400" height="200"/>
+		</ko>
+		<nl>
+			<mainframe width="400" height="200"/>
+		</nl>
+		<no>
+			<mainframe width="400" height="200"/>
+		</no>
+		<pl>
+			<mainframe width="400" height="200"/>
+		</pl>
+		<pt>
+			<mainframe width="400" height="200"/>
+		</pt>
+		<pt-br>
+			<mainframe width="400" height="200"/>
+		</pt-br>
+		<sv>
+			<mainframe width="400" height="200"/>
+		</sv>
+		<tr>
+			<mainframe width="400" height="200"/>
+		</tr>
+		<xx-db>
+			<mainframe width="400" height="200"/>
+		</xx-db>
+		<xx-sb>
+			<mainframe width="400" height="200"/>
+		</xx-sb>
+		<zh-cn>
+			<mainframe width="400" height="200"/>
+		</zh-cn>
+		<zh-tw>
+			<mainframe width="400" height="200"/>
+		</zh-tw>
+		<ru>
+			<mainframe width="400" height="200"/>
+		</ru>
+		<sk>
+			<mainframe width="400" height="200"/>
+		</sk>
+		<hu>
+			<mainframe width="400" height="200"/>
+		</hu>
+		<el>
+			<mainframe width="400" height="200"/>
+		</el>
+		<gr>
+			<mainframe width="400" height="200"/>
+		</gr>
+		<hr>
+			<mainframe width="400" height="200"/>
+		</hr>
+		<sr>
+			<mainframe width="400" height="200"/>
+		</sr>
+		<he>
+			<mainframe width="400" height="200"/>
+		</he>
+		<ar-AE>
+			<mainframe width="400" height="200"/>
+		</ar-AE>
+	</nmc_rename_network_dlg>
+	<nmc_hide_item_dlg>
+		<en-us>
+			<mainframe width="400" height="240"/>
+		</en-us>
+		<en-au>
+			<mainframe width="400" height="240"/>
+		</en-au>
+		<en-ca>
+			<mainframe width="400" height="240"/>
+		</en-ca>
+		<en-gb>
+			<mainframe width="400" height="240"/>
+		</en-gb>
+		<cs>
+			<mainframe width="400" height="240"/>
+		</cs>
+		<da>
+			<mainframe width="400" height="240"/>
+		</da>
+		<de>
+			<mainframe width="400" height="240"/>
+		</de>
+		<es-mx>
+			<mainframe width="400" height="240"/>
+		</es-mx>
+		<es>
+			<mainframe width="400" height="240"/>
+		</es>
+		<fi>
+			<mainframe width="400" height="240"/>
+		</fi>
+		<fr>
+			<mainframe width="400" height="240"/>
+		</fr>
+		<fr-ca>
+			<mainframe width="400" height="240"/>
+		</fr-ca>
+		<it>
+			<mainframe width="400" height="240"/>
+		</it>
+		<ja>
+			<mainframe width="400" height="240"/>
+		</ja>
+		<jp>
+			<mainframe width="400" height="240"/>
+		</jp>
+		<ko>
+			<mainframe width="400" height="240"/>
+		</ko>
+		<nl>
+			<mainframe width="400" height="240"/>
+		</nl>
+		<no>
+			<mainframe width="400" height="240"/>
+		</no>
+		<pl>
+			<mainframe width="400" height="240"/>
+		</pl>
+		<pt>
+			<mainframe width="400" height="240"/>
+		</pt>
+		<pt-br>
+			<mainframe width="400" height="240"/>
+		</pt-br>
+		<sv>
+			<mainframe width="400" height="240"/>
+		</sv>
+		<tr>
+			<mainframe width="400" height="240"/>
+		</tr>
+		<xx-db>
+			<mainframe width="400" height="240"/>
+		</xx-db>
+		<xx-sb>
+			<mainframe width="400" height="240"/>
+		</xx-sb>
+		<zh-cn>
+			<mainframe width="400" height="240"/>
+		</zh-cn>
+		<zh-tw>
+			<mainframe width="400" height="240"/>
+		</zh-tw>
+		<ru>
+			<mainframe width="400" height="240"/>
+		</ru>
+		<sk>
+			<mainframe width="400" height="240"/>
+		</sk>
+		<hu>
+			<mainframe width="400" height="240"/>
+		</hu>
+		<el>
+			<mainframe width="400" height="240"/>
+		</el>
+		<gr>
+			<mainframe width="400" height="240"/>
+		</gr>
+		<hr>
+			<mainframe width="400" height="240"/>
+		</hr>
+		<sr>
+			<mainframe width="400" height="240"/>
+		</sr>
+		<he>
+			<mainframe width="400" height="200"/>
+		</he>
+		<ar-AE>
+			<mainframe width="400" height="200"/>
+		</ar-AE>
+	</nmc_hide_item_dlg>
+	<nmc_fix_dlg>
+		<en-us>
+			<mainframe width="400" height="220"/>
+		</en-us>
+		<en-au>
+			<mainframe width="400" height="200"/>
+		</en-au>
+		<en-ca>
+			<mainframe width="400" height="200"/>
+		</en-ca>
+		<en-gb>
+			<mainframe width="400" height="200"/>
+		</en-gb>
+		<cs>
+			<mainframe width="400" height="220"/>
+		</cs>
+		<da>
+			<mainframe width="400" height="220"/>
+		</da>
+		<de>
+			<mainframe width="400" height="220"/>
+		</de>
+		<es-mx>
+			<mainframe width="400" height="220"/>
+		</es-mx>
+		<es>
+			<mainframe width="400" height="220"/>
+		</es>
+		<fi>
+			<mainframe width="400" height="220"/>
+		</fi>
+		<fr>
+			<mainframe width="400" height="220"/>
+		</fr>
+		<fr-ca>
+			<mainframe width="400" height="220"/>
+		</fr-ca>
+		<it>
+			<mainframe width="400" height="220"/>
+		</it>
+		<ja>
+			<mainframe width="400" height="220"/>
+		</ja>
+		<jp>
+			<mainframe width="400" height="220"/>
+		</jp>
+		<ko>
+			<mainframe width="400" height="220"/>
+		</ko>
+		<nl>
+			<mainframe width="400" height="220"/>
+		</nl>
+		<no>
+			<mainframe width="400" height="220"/>
+		</no>
+		<pl>
+			<mainframe width="400" height="220"/>
+		</pl>
+		<pt>
+			<mainframe width="400" height="220"/>
+		</pt>
+		<pt-br>
+			<mainframe width="400" height="220"/>
+		</pt-br>
+		<sv>
+			<mainframe width="400" height="220"/>
+		</sv>
+		<tr>
+			<mainframe width="400" height="220"/>
+		</tr>
+		<xx-db>
+			<mainframe width="400" height="220"/>
+		</xx-db>
+		<xx-sb>
+			<mainframe width="400" height="220"/>
+		</xx-sb>
+		<zh-cn>
+			<mainframe width="400" height="220"/>
+		</zh-cn>
+		<zh-tw>
+			<mainframe width="400" height="220"/>
+		</zh-tw>
+		<ru>
+			<mainframe width="400" height="220"/>
+		</ru>
+		<sk>
+			<mainframe width="400" height="220"/>
+		</sk>
+		<hu>
+			<mainframe width="400" height="220"/>
+		</hu>
+		<el>
+			<mainframe width="400" height="220"/>
+		</el>
+		<gr>
+			<mainframe width="400" height="220"/>
+		</gr>
+		<hr>
+			<mainframe width="400" height="200"/>
+		</hr>
+		<sr>
+			<mainframe width="400" height="200"/>
+		</sr>
+		<he>
+			<mainframe width="400" height="200"/>
+		</he>
+		<ar-AE>
+			<mainframe width="400" height="200"/>
+		</ar-AE>
+	</nmc_fix_dlg>
+	<nmc_modify_permission_dlg>
+		<en-us>
+			<mainframe width="400" height="250"/>
+		</en-us>
+		<en-au>
+			<mainframe width="400" height="250"/>
+		</en-au>
+		<en-ca>
+			<mainframe width="400" height="250"/>
+		</en-ca>
+		<en-gb>
+			<mainframe width="400" height="250"/>
+		</en-gb>
+		<cs>
+			<mainframe width="430" height="250"/>
+		</cs>
+		<da>
+			<mainframe width="400" height="250"/>
+		</da>
+		<de>
+			<mainframe width="400" height="250"/>
+		</de>
+		<es-mx>
+			<mainframe width="430" height="250"/>
+		</es-mx>
+		<es>
+			<mainframe width="430" height="250"/>
+		</es>
+		<fi>
+			<mainframe width="400" height="250"/>
+		</fi>
+		<fr>
+			<mainframe width="400" height="250"/>
+		</fr>
+		<fr-ca>
+			<mainframe width="400" height="250"/>
+		</fr-ca>
+		<it>
+			<mainframe width="400" height="250"/>
+		</it>
+		<ja>
+			<mainframe width="430" height="250"/>
+		</ja>
+		<jp>
+			<mainframe width="430" height="250"/>
+		</jp>
+		<ko>
+			<mainframe width="450" height="250"/>
+		</ko>
+		<nl>
+			<mainframe width="400" height="250"/>
+		</nl>
+		<no>
+			<mainframe width="400" height="250"/>
+		</no>
+		<pl>
+			<mainframe width="400" height="250"/>
+		</pl>
+		<pt>
+			<mainframe width="400" height="250"/>
+		</pt>
+		<pt-br>
+			<mainframe width="400" height="250"/>
+		</pt-br>
+		<sv>
+			<mainframe width="400" height="250"/>
+		</sv>
+		<tr>
+			<mainframe width="450" height="250"/>
+		</tr>
+		<xx-db>
+			<mainframe width="400" height="250"/>
+		</xx-db>
+		<xx-sb>
+			<mainframe width="400" height="250"/>
+		</xx-sb>
+		<zh-cn>
+			<mainframe width="450" height="250"/>
+		</zh-cn>
+		<zh-tw>
+			<mainframe width="450" height="250"/>
+		</zh-tw>
+		<ru>
+			<mainframe width="450" height="250"/>
+		</ru>
+		<sk>
+			<mainframe width="450" height="250"/>
+		</sk>
+		<hu>
+			<mainframe width="450" height="250"/>
+		</hu>
+		<el>
+			<mainframe width="450" height="250"/>
+		</el>
+		<gr>
+			<mainframe width="450" height="250"/>
+		</gr>
+		<hr>
+			<mainframe width="400" height="250"/>
+		</hr>
+		<sr>
+			<mainframe width="400" height="250"/>
+		</sr>
+		<he>
+			<mainframe width="400" height="200"/>
+		</he>
+		<ar-AE>
+			<mainframe width="400" height="200"/>
+		</ar-AE>
+	</nmc_modify_permission_dlg>
+	<nmc_modify_devprop_dlg>
+		<en-us>
+			<mainframe width="400" height="260"/>
+		</en-us>
+		<en-au>
+			<mainframe width="400" height="260"/>
+		</en-au>
+		<en-ca>
+			<mainframe width="400" height="260"/>
+		</en-ca>
+		<en-gb>
+			<mainframe width="400" height="260"/>
+		</en-gb>
+		<cs>
+			<mainframe width="400" height="260"/>
+		</cs>
+		<da>
+			<mainframe width="400" height="260"/>
+		</da>
+		<de>
+			<mainframe width="400" height="260"/>
+		</de>
+		<es-mx>
+			<mainframe width="400" height="260"/>
+		</es-mx>
+		<es>
+			<mainframe width="400" height="260"/>
+		</es>
+		<fi>
+			<mainframe width="400" height="260"/>
+		</fi>
+		<fr>
+			<mainframe width="410" height="260"/>
+		</fr>
+		<fr-ca>
+			<mainframe width="410" height="260"/>
+		</fr-ca>
+		<it>
+			<mainframe width="400" height="260"/>
+		</it>
+		<ja>
+			<mainframe width="400" height="260"/>
+		</ja>
+		<jp>
+			<mainframe width="400" height="260"/>
+		</jp>
+		<ko>
+			<mainframe width="400" height="280"/>
+		</ko>
+		<nl>
+			<mainframe width="400" height="260"/>
+		</nl>
+		<no>
+			<mainframe width="400" height="260"/>
+		</no>
+		<pl>
+			<mainframe width="400" height="260"/>
+		</pl>
+		<pt>
+			<mainframe width="400" height="260"/>
+		</pt>
+		<pt-br>
+			<mainframe width="400" height="260"/>
+		</pt-br>
+		<sv>
+			<mainframe width="400" height="260"/>
+		</sv>
+		<tr>
+			<mainframe width="400" height="260"/>
+		</tr>
+		<xx-db>
+			<mainframe width="400" height="260"/>
+		</xx-db>
+		<xx-sb>
+			<mainframe width="400" height="260"/>
+		</xx-sb>
+		<zh-cn>
+			<mainframe width="400" height="280"/>
+		</zh-cn>
+		<zh-tw>
+			<mainframe width="400" height="280"/>
+		</zh-tw>
+		<ru>
+			<mainframe width="400" height="260"/>
+		</ru>
+		<sk>
+			<mainframe width="400" height="260"/>
+		</sk>
+		<hu>
+			<mainframe width="400" height="260"/>
+		</hu>
+		<el>
+			<mainframe width="400" height="260"/>
+		</el>
+		<gr>
+			<mainframe width="400" height="260"/>
+		</gr>
+		<hr>
+			<mainframe width="400" height="260"/>
+		</hr>
+		<sr>
+			<mainframe width="400" height="260"/>
+		</sr>
+		<he>
+			<mainframe width="400" height="260"/>
+		</he>
+		<ar-AE>
+			<mainframe width="400" height="260"/>
+		</ar-AE>
+	</nmc_modify_devprop_dlg>
+	<mcnmdlg_modify_category_dlg>
+		<en-us>
+			<mainframe width="400" height="280"/>
+		</en-us>
+		<en-au>
+			<mainframe width="400" height="280"/>
+		</en-au>
+		<en-ca>
+			<mainframe width="400" height="280"/>
+		</en-ca>
+		<en-gb>
+			<mainframe width="400" height="280"/>
+		</en-gb>
+		<cs>
+			<mainframe width="400" height="280"/>
+		</cs>
+		<da>
+			<mainframe width="400" height="320"/>
+		</da>
+		<de>
+			<mainframe width="400" height="320"/>
+		</de>
+		<es-mx>
+			<mainframe width="400" height="280"/>
+		</es-mx>
+		<es>
+			<mainframe width="400" height="280"/>
+		</es>
+		<fi>
+			<mainframe width="400" height="280"/>
+		</fi>
+		<fr>
+			<mainframe width="400" height="280"/>
+		</fr>
+		<fr-ca>
+			<mainframe width="400" height="280"/>
+		</fr-ca>
+		<it>
+			<mainframe width="400" height="280"/>
+		</it>
+		<ja>
+			<mainframe width="400" height="280"/>
+		</ja>
+		<jp>
+			<mainframe width="400" height="280"/>
+		</jp>
+		<ko>
+			<mainframe width="400" height="280"/>
+		</ko>
+		<nl>
+			<mainframe width="400" height="280"/>
+		</nl>
+		<no>
+			<mainframe width="400" height="280"/>
+		</no>
+		<pl>
+			<mainframe width="400" height="320"/>
+		</pl>
+		<pt>
+			<mainframe width="400" height="280"/>
+		</pt>
+		<pt-br>
+			<mainframe width="400" height="320"/>
+		</pt-br>
+		<sv>
+			<mainframe width="400" height="320"/>
+		</sv>
+		<tr>
+			<mainframe width="400" height="320"/>
+		</tr>
+		<xx-db>
+			<mainframe width="400" height="280"/>
+		</xx-db>
+		<xx-sb>
+			<mainframe width="400" height="280"/>
+		</xx-sb>
+		<zh-cn>
+			<mainframe width="400" height="280"/>
+		</zh-cn>
+		<zh-tw>
+			<mainframe width="400" height="280"/>
+		</zh-tw>
+		<ru>
+			<mainframe width="400" height="320"/>
+		</ru>
+		<sk>
+			<mainframe width="400" height="320"/>
+		</sk>
+		<hu>
+			<mainframe width="400" height="320"/>
+		</hu>
+		<el>
+			<mainframe width="400" height="320"/>
+		</el>
+		<gr>
+			<mainframe width="400" height="320"/>
+		</gr>
+		<hr>
+			<mainframe width="400" height="320"/>
+		</hr>
+		<sr>
+			<mainframe width="400" height="320"/>
+		</sr>
+		<he>
+			<mainframe width="400" height="320"/>
+		</he>
+		<ar-AE>
+			<mainframe width="400" height="320"/>
+		</ar-AE>
+	</mcnmdlg_modify_category_dlg>
+	<nmc_unmanage_dlg>
+		<en-us>
+			<mainframe width="400" height="200"/>
+		</en-us>
+		<en-au>
+			<mainframe width="400" height="200"/>
+		</en-au>
+		<en-ca>
+			<mainframe width="400" height="200"/>
+		</en-ca>
+		<en-gb>
+			<mainframe width="400" height="200"/>
+		</en-gb>
+		<cs>
+			<mainframe width="430" height="240"/>
+		</cs>
+		<da>
+			<mainframe width="400" height="220"/>
+		</da>
+		<de>
+			<mainframe width="400" height="220"/>
+		</de>
+		<es-mx>
+			<mainframe width="430" height="240"/>
+		</es-mx>
+		<es>
+			<mainframe width="430" height="240"/>
+		</es>
+		<fi>
+			<mainframe width="400" height="220"/>
+		</fi>
+		<fr>
+			<mainframe width="400" height="220"/>
+		</fr>
+		<fr-ca>
+			<mainframe width="400" height="220"/>
+		</fr-ca>
+		<it>
+			<mainframe width="400" height="240"/>
+		</it>
+		<ja>
+			<mainframe width="430" height="260"/>
+		</ja>
+		<jp>
+			<mainframe width="430" height="260"/>
+		</jp>
+		<ko>
+			<mainframe width="450" height="220"/>
+		</ko>
+		<nl>
+			<mainframe width="400" height="220"/>
+		</nl>
+		<no>
+			<mainframe width="400" height="220"/>
+		</no>
+		<pl>
+			<mainframe width="400" height="220"/>
+		</pl>
+		<pt>
+			<mainframe width="400" height="220"/>
+		</pt>
+		<pt-br>
+			<mainframe width="400" height="240"/>
+		</pt-br>
+		<sv>
+			<mainframe width="400" height="240"/>
+		</sv>
+		<tr>
+			<mainframe width="450" height="220"/>
+		</tr>
+		<xx-db>
+			<mainframe width="400" height="200"/>
+		</xx-db>
+		<xx-sb>
+			<mainframe width="400" height="200"/>
+		</xx-sb>
+		<zh-cn>
+			<mainframe width="450" height="220"/>
+		</zh-cn>
+		<zh-tw>
+			<mainframe width="450" height="220"/>
+		</zh-tw>
+		<ru>
+			<mainframe width="430" height="240"/>
+		</ru>
+		<sk>
+			<mainframe width="430" height="240"/>
+		</sk>
+		<hu>
+			<mainframe width="430" height="240"/>
+		</hu>
+		<el>
+			<mainframe width="430" height="240"/>
+		</el>
+		<gr>
+			<mainframe width="430" height="240"/>
+		</gr>
+		<hr>
+			<mainframe width="400" height="240"/>
+		</hr>
+		<sr>
+			<mainframe width="400" height="240"/>
+		</sr>
+		<he>
+			<mainframe width="400" height="240"/>
+		</he>
+		<ar-AE>
+			<mainframe width="400" height="240"/>
+		</ar-AE>
+	</nmc_unmanage_dlg>
+</uiconfig>

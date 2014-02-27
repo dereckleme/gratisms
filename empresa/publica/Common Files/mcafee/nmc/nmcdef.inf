@@ -1,0 +1,112 @@
+[Version]
+Signature="$Chicago$"
+AdvancedINF=2.5
+LayoutFile=nmcdef.inf
+
+[Installer_Config]
+AppID=NMC
+Shared=0
+
+[Env-Var]
+
+[DirIds]
+;Env-Var Defined ==> Program Files
+;33100 ==> All Users\Application Data
+;33000 ==> Program Files\Common files
+;33200 ==> McIns.exe Module dir
+;33300 ==> ExtractCAB location
+;16422 ==> Program Files
+
+46350=%33000%\McAfee\NMC
+46360=%CommonProgramW6432%\McAfee\NMC
+
+
+[SourceDisksNames]
+1="McAfee NMC Default OEM Configuration Files","",1
+
+[DefaultInstall32]
+CopyFiles=NMCFileList32
+AddReg=OEM
+
+[DefaultUnInstall32]
+DelFiles=NMCFileList32
+DelReg=OEMROOT
+
+[DefaultInstall64]
+CopyFiles=NMCFileList64
+AddReg=OEM
+
+[DefaultUnInstall64]
+DelFiles=NMCFileList64
+DelReg=OEMROOT
+
+[Install_NT]
+DefaultInstall32=Setup
+
+[UnInstall_NT]
+DefaultUnInstall32=Setup
+
+[Install_NT_X64]
+DefaultInstall64=Setup
+
+[UnInstall_NT_X64]
+DefaultUnInstall64=Setup
+
+[DestinationDirs]   
+NMCFileList32=46350
+NMCFileList64=46360
+
+[NMCFileList32]
+nmcdef.inf,,,65568
+
+[NMCFileList64]
+nmcdef.inf,,,65568
+
+
+[OEMROOT]
+HKLM,Software\McAfee\HomeNet\OEM\NMC\settings
+HKLM,Software\McAfee\HomeNet\OEM\MNM\settings
+HKLM,Software\McAfee\HomeNet\OEM\MNA\settings
+
+
+[OEM]
+;MNA Default settings
+; Features
+HKLM,Software\McAfee\HomeNet\OEM\MNA\settings\Features,"overcrowded_nodes_threshold",0x00010001,64
+HKLM,Software\McAfee\HomeNet\OEM\MNA\settings\Features,"unified_join_timeout",0x00010001,20
+
+; M@ys
+HKLM,Software\McAfee\HomeNet\OEM\NMC\settings\Mays,"mays_active",0x00010001,1
+HKLM,Software\McAfee\HomeNet\OEM\NMC\settings\Mays,"auto_timeout",0x00010001,15
+HKLM,Software\McAfee\HomeNet\OEM\NMC\settings\Mays,"interval",0x00010001,2592000
+HKLM,Software\McAfee\HomeNet\OEM\NMC\settings\Mays,"maximum_threshold",0x00010001,6
+HKLM,Software\McAfee\HomeNet\OEM\NMC\settings\Mays,"minimum_threshold",0x00010001,1
+HKLM,Software\McAfee\HomeNet\OEM\NMC\settings\Mays,"number_of_networks",0x00010001,2
+HKLM,Software\McAfee\HomeNet\OEM\NMC\settings\Mays,"oob_delay",0x00010001,28800
+HKLM,Software\McAfee\HomeNet\OEM\NMC\settings\Mays,"alert_status",0x00010001,1
+
+; TrustWithMPF
+HKLM,Software\McAfee\HomeNet\OEM\NMC\settings\TrustWithMPF,"mpf_follows_nmc_trust",0x00010001,1
+HKLM,Software\McAfee\HomeNet\OEM\NMC\settings\TrustWithMPF,"nmc_follows_mpf_trust",0x00010001,1
+
+
+;MNM Default settings
+
+;Features
+HKLM,Software\McAfee\HomeNet\OEM\MNM\settings\Features,"status",0x00010001,1
+HKLM,Software\McAfee\HomeNet\OEM\MNM\settings\Features,"notifyme",0x00010001,1
+
+;Learning Mode
+HKLM,Software\McAfee\HomeNet\OEM\MNM\settings\LearningMode,"period",0x00010001,4320
+HKLM,Software\McAfee\HomeNet\OEM\MNM\settings\LearningMode,"status",0x00010001,1
+
+;Alerts
+HKLM,Software\McAfee\HomeNet\OEM\MNM\settings\Alerts,"Alert_timeout",0x00010001,15
+HKLM,Software\McAfee\HomeNet\OEM\MNM\settings\Alerts,"IntruderAlert",0x00010001,1
+HKLM,Software\McAfee\HomeNet\OEM\MNM\settings\Alerts,"LearningModeAlert",0x00010001,1
+HKLM,Software\McAfee\HomeNet\OEM\MNM\settings\Alerts,"NewPCAlert",0x00010001,1
+HKLM,Software\McAfee\HomeNet\OEM\MNM\settings\Alerts,"alert_status",0x00010001,1
+HKLM,Software\McAfee\HomeNet\OEM\MNM\settings\Alerts,"WatchThisFeatureAlert",0x00010001,1
+
+
+

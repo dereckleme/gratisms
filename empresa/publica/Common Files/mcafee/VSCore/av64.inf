@@ -1,0 +1,286 @@
+[Version]
+Signature="$Chicago$"
+AdvancedINF=2.5
+LayoutFile=av.inf
+
+[SourceDisksNames]
+1="McAfee VSCore VirusScan","",1
+
+[Installer_Config]
+AppID=VSCore
+Shared=0
+
+[Env-Var]
+%VSINSTALL_DIR%=$REG$Key=Software\McAfee\VirusScan\InstallSettings:Name=Install Dir
+%VSINSTALL_DIR64%=$REG$Key=Software\McAfee\VirusScan\InstallSettings:Name=Install Dir 64
+%VSCOREINSTALL_DIR%=$REG$Key=Software\McAfee\SystemCore\VSCore:Name=szInstallDir32
+%VSCOREINSTALL_DIR64%=$REG$Key=Software\McAfee\SystemCore\VSCore:Name=szInstallDir64
+
+[DirIds]
+52000=%VSINSTALL_DIR%
+53000=%VSINSTALL_DIR64%
+54000=%VSCOREINSTALL_DIR%
+55000=%VSCOREINSTALL_DIR64%
+56000=%33100%\McAfee\VirusScan\Quarantine
+56100=%33100%\McAfee\VirusScan
+60000=%33000%\McAfee\VSCore
+61000=%CommonProgramW6432%\McAfee\VSCore
+
+[DestinationDirs]
+VSCoreProductLegacy86=52000
+VSCoreProductLegacySys86=11
+VSCoreProductLegacyDrivers86=11,drivers
+
+[Shared_pkg]
+VSCoreAv86=%60000%\av.inf
+VSCoreAv64=%61000%\av64.inf
+
+[Install_NT]
+AvLiPresetup86=Setup
+AvLiPostSetup86=Setup
+
+[UnInstall_NT]
+AvLiUninstall86=Setup
+
+[Install_VISTA]
+AvLiPresetup86=Setup
+AvLiRunInstall86=EXE
+AvLiPostSetup86=Setup
+
+[UnInstall_VISTA]
+AvLiUninstall86=Setup
+
+[Install_VISTA_x64]
+AvLiPresetup64=Setup
+AvLiPostSetup64=Setup
+
+[UnInstall_VISTA_x64]
+AvLiUninstall64=Setup
+
+[AvLiPresetup86]
+DelFiles=VSCoreProductLegacy86,VSCoreProductLegacySys86,VSCoreProductLegacyDrivers86
+DelReg=VSCoreRegistryLegacy86
+AddReg=Default_Reg,IDs_Reg
+AddReg=Location_Reg,ProcessList_Reg,Exclusion_Reg
+
+[AvLiPostSetup86]
+DelReg=OsScriptScanRegistry
+
+[AvLiUninstall86]
+Cleanup=1
+DelReg=VSCoreRegistryRoots
+DelFiles=VSCoreProductLegacy86,VSCoreProductLegacySys86,VSCoreProductLegacyDrivers86
+
+[AvLiPresetup64]
+DelFiles=VSCoreProductLegacy86,VSCoreProductLegacySys86,VSCoreProductLegacyDrivers86
+DelReg=VSCoreRegistryLegacy86
+AddReg=Default_Reg,Default64_Reg,IDs_Reg
+AddReg=Location_Reg,ProcessList_Reg,Exclusion_Reg
+
+[AvLiPostSetup64]
+DelReg=OsScriptScanRegistry
+
+[AvLiUninstall64]
+Cleanup=1
+DelReg=VSCoreRegistryRoots
+DelFiles=VSCoreProductLegacy86,VSCoreProductLegacySys86,VSCoreProductLegacyDrivers86
+
+[VSCoreProductLegacy86]
+naiavfin.exe,,,65568
+naiavf5a.sys,,,65568
+naiavf5i.sys,,,65568
+naiavf5x.sys,,,65568
+naiavf5x.cat,,,65568
+EntDrv50.sys,,,65568
+EntDrv51.sys,,,65568
+EntDrv52.sys,,,65568
+mytilus2.dll,,,65568
+mytilus.dll,,,65568
+scriptcl.dll,,,65568
+scriptsv.dll,,,65568
+mfecaka.dll,,,65568
+mfecakk.inf,,,65568
+mfecakk.sys,,,65568
+mfeavfk.cat,,,65568
+mfeavfk.inf,,,65568
+mferkdk.cat,,,65568
+mferkdk.inf,,,65568
+mferkdk.sys,,,65568
+
+[VSCoreProductLegacySys86]
+EntAPI.dll,,,65568
+
+[VSCoreProductLegacyDrivers86]
+naiavf5a.sys,,,65568
+naiavf5i.sys,,,65568
+naiavf5x.sys,,,65568
+NaiFiltr.sys,,,65568
+NaiFsRec.sys,,,65568
+
+[VSCoreRegistryLegacy86]
+HKLM,Software\Network Associates\TVD
+HKLM,Software\McAfee\VSCore\On Access Scanner\McShield\Configuration,"dwDebugFlags"
+HKLM,Software\McAfee\VSCore\On Access Scanner\McShield\Configuration,"DisableFilterExtensionOptimisation"
+HKLM,Software\McAfee\VSCore\On Access Scanner\McShield\Configuration,"DisableFilterNetworkScansOptimisation"
+HKLM,Software\McAfee\VSCore\On Access Scanner\McShield\Configuration,"DisableFilterLocalScansOptimisation"
+HKLM,Software\McAfee\VSCore\On Access Scanner\McShield\Configuration,"NumberOfScanners"
+HKLM,Software\McAfee\VSCore\On Access Scanner\McShield\Configuration,"DontTellAnnouncerAboutHibernate"
+HKLM,Software\McAfee\VSCore\On Access Scanner\McShield\Configuration\Default,"uAction_Auto"
+HKLM,Software\McAfee\VSCore\On Access Scanner\McShield\Configuration\Default,"uAction_Cookie_Auto"
+HKLM,Software\McAfee\VSCore\On Access Scanner\McShield\Configuration\High,"uAction_Auto"
+HKLM,Software\McAfee\VSCore\On Access Scanner\McShield\Configuration\High,"uAction_Cookie_Auto"
+HKLM,System\CurrentControlSet\Services\NaiFsRec
+HKLM,System\CurrentControlSet\Services\NaiFiltr
+HKLM,System\CurrentControlSet\Services\NaiAvFilter1
+
+[OsScriptScanRegistry]
+HKCU,Software\Classes\CLSID\{B54F3741-5B07-11CF-A4B0-00AA004A55E8}
+HKCU,Software\Classes\CLSID\{F414C260-6AC0-11CF-B6D1-00AA00BBBB58}
+
+[VSCoreRegistryRoots]
+HKLM,System\CurrentControlSet\Services\VxD\VshInit
+HKLM,Software\McAfee\SystemCore\VSCore
+HKLM,Software\McAfee\AVEngine
+
+[IDs_Reg]
+HKLM,Software\McAfee\SystemCore\VSCore\Email Scanner\Internet,"EOLPid",65537,16033
+HKLM,Software\McAfee\SystemCore\VSCore\Email Scanner\Internet,"ContextID",65537,36866
+HKLM,Software\McAfee\SystemCore\VSCore\Email Scanner\Internet,"ContextIDs",0x00000001,02,00,00,00,02,90,00,00,0f,90,00,00
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"EOLPid",65537,16033
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"PPContextIDs",0x00000001,00,50,00,00,03,50,00,00,00,90,00,00,02,50,00,00
+													  
+HKLM,Software\McAfee\SystemCore\VSCore\Script Scanner,"EOLPid",65537,16033
+HKLM,Software\McAfee\SystemCore\VSCore\Script Scanner,"PPContextIDs",0x00000001,00,50,00,00,03,50,00,00,03,90,00,00,00,90,00,00,02,50,00,00
+										
+HKLM,Software\McAfee\SystemCore\VSCore\VirusScanner,"EOLPid",65537,16033
+HKLM,Software\McAfee\SystemCore\VSCore\VirusScanner,"ContextID",65537,36865
+
+[Default_Reg]
+HKLM,Software\McAfee\SystemCore\VSCore,"EnableVersionSpecificRTD",65537,0
+HKLM,Software\McAfee\SystemCore\VSCore,"NoRunTimeDats",65537,2
+HKLM,Software\McAfee\SystemCore\VSCore\NVP,"DetectAdware",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\NVP,"DetectDialers",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\NVP,"DetectJokes",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\NVP,"DetectKeyLoggers",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\NVP,"DetectPasswordCrackers",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\NVP,"DetectRemoteAdminTools",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\NVP,"DetectSpyware",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\NVP,"DetectPotentiallyUnwantedApps",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\BehaviourBlocking,"BOPMode",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\BehaviourBlocking,"BOPShowMessages",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"bScanFloppyOnShutdown",65537,0
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"ScannerThreadTimeout",65537,45000
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"ScannerThreadTimeoutEx",65537,45000
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"SmoothWritesExtensions",,"ini log txt trc wiki-publisher log1 evtx mui"
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"OasRpcTimeout",65537,5
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"OnlyUseDefaultConfig",65537,0
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"ScanArchiveTimeout",65537,15
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"DotVirOnQuarantine",65537,0
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"DotVirToDenyWrite",65537,0
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"DotVirToDenyFailedClean",65537,0
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"RepairBackup",65537,0
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"SendScanCompleteNotifications",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"bDontScanBootSectors",65537,0
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"bDontScanMBRSectors",65537,0
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"RepairBootSectors",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"UseAVVDats",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"UsePUPDats",65537,0
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"RepairBackupPUPs",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"RepairBackupViruses",65537,1 
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"RepairBackupCookies",65537,1 
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"FailActionAfterFailedBackup",65537,1
+
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Default,"ScanArchives",65537,0
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Default,"bLogToFile",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Default,"dwMaxLogSizeMB",65537,2
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Default,"LogFileFormat",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Default,"bLimitSize",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Default,"bScanIncoming",65539,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Default,"bScanOutgoing",65539,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Default,"NetworkExtensionMode",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Default,"bDontScanCompress",65537,0
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Default,"uSecAction",65537,4
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Default,"uSecAction_Program",65537,7
+
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Default,"bNetworkScanDontRepair",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Default,"ScanBackupReads",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Default,"uAction",65537,5
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Default,"uAction_Program",65537,7
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Default,"uAction_Cookie",65537,5
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Default,"uSecAction_Cookie",65537,7
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\High,"bScanIncoming",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\High,"bScanOutgoing",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\High,"bNetworkScanEnabled",65537,0
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\High,"bNetworkScanDontRepair",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\High,"LocalExtensionMode",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\High,"NetworkExtensionMode",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\High,"dwProgramHeuristicsLevel",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\High,"dwMacroHeuristicsLevel",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\High,"bDontScanCompress",65537,0
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\High,"ScanArchives",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\High,"uAction",65537,5
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\High,"uSecAction",65537,4
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\High,"uAction_Program",65537,7
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\High,"uSecAction_Program",65537,7
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\High,"ScanBackupReads",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\High,"uAction_Cookie",65537,5
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\High,"uSecAction_Cookie",65537,7
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Low,"bScanIncoming",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Low,"bScanOutgoing",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Low,"bNetworkScanEnabled",65537,0
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Low,"bNetworkScanDontRepair",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Low,"LocalExtensionMode",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Low,"NetworkExtensionMode",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Low,"dwProgramHeuristicsLevel",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Low,"dwMacroHeuristicsLevel",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Low,"bDontScanCompress",65537,0
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Low,"ScanArchives",65537,0
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Low,"ScanMime",65537,0
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Low,"uAction",65537,5
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Low,"uSecAction",65537,4
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Low,"uAction_Program",65537,7
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Low,"uSecAction_Program",65537,7
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Low,"ScanBackupReads",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\Script Scanner,"bUseMcShieldEngine",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\Script Scanner,"HookMode",65537,2
+HKLM,Software\McAfee\SystemCore\VSCore\Script Scanner,"ScriptScanEnabled",65539,0
+HKLM,Software\McAfee\SystemCore\VSCore\Email Scanner\Internet,"bScanIncoming",65539,1
+HKLM,Software\McAfee\SystemCore\VSCore\Email Scanner\Internet,"ApplyNVP",65539,1
+HKLM,Software\McAfee\SystemCore\VSCore\VirusScanner,"bLogToFile",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\VirusScanner,"bLimitSize",65537,1
+HKLM,Software\McAfee\SystemCore\VSCore\VirusScanner,"dwMaxLogSizeMB",65537,2
+HKLM,Software\McAfee\SystemCore\VSCore\VirusScanner,"LogFileFormat",65537,1
+
+[Default64_Reg]
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\BehaviourBlocking,"BOPMode",65537,0
+
+[Location_Reg]
+HKLM,Software\McAfee\SystemCore\VSCore\Quarantine,"szMoveFolder",,"%56000%"
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"RepairBackupDirectory",,"%56000%"
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"szMoveToFolder",,"%56000%"
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration,"RepairBackupDirectory",,"%56000%"
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Default,"szLogFileName",,"%56100%\Logs\OAS.Log"
+HKLM,Software\McAfee\SystemCore\VSCore\VirusScanner,"szLogFileName",,"%56100%\Logs\%USERNAME%_ODS.Log"
+
+[ProcessList_Reg]
+;HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\High,"ProcessList",65536,Eudora.exe,IMApp.exe,IncMail.exe,JsvMail.exe,NATEON.exe,NateOnMain.exe,OpenRide.exe,Opera.exe,PostPet3.exe,QQ.exe,YahooMessenger.exe,aim.exe,aim6.exe,almail.exe,gaim.exe,googletalk.exe,gtalk.exe,icq.exe,icqlite.exe,im+voice.exe,msimn.exe,msksrver.exe,msmsgs.exe,msnmsgr.exe,netscape.exe,outlook.exe,paltalk.exe,pocomail.exe,skype.exe,thebat.exe,thunderbird.exe,trillian.exe,winmail.exe,wpmail.exe,wlmail.exe,ypager.exe
+;HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\High,"IMProcessList",65536,ypager.exe=1,aim.exe=1,gaim.exe=1,gtalk.exe=1,msnmsgr.exe=1,icq.exe=1,skype.exe=1,trillian.exe=1,im+voice.exe=1,msmsgs.exe=1,aim6.exe=1,googletalk.exe=1,icqlite.exe=1,IMApp.exe=1,paltalk.exe=1,YahooMessenger.exe=1,NATEON.exe=1,NateOnMain.exe=1,QQ.exe=1
+;HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\High,"EmailProcessList",65536,almail.exe=1,Eudora.exe=1,IncMail.exe=1,JsvMail.exe=1,outlook.exe=1,thunderbird.exe=1,wpmail.exe=1,wlmail.exe=1,winmail.exe=1,msimn.exe=1,msksrver.exe=1,OpenRide.exe=1,pocomail.exe=1,netscape.exe=1,Opera.exe=1,thebat.exe=1,PostPet3.exe=1
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Low,"ProcessList",65536,windvd.exe,TMC.exe,NaturalTouch.exe,TMCMonitor.exe,McSACore.exe,mcshield.exe,mfehidin.exe,mfevtps.exe,mchost.exe,hwupdchk.exe,mcinst.exe,McSvHost.exe,McAltHst.exe,McUICnt.exe,mfefire.exe,DAInstall.exe,mcmscsvc.exe,MpfSrv.exe,McProxy.exe,mcshell.exe,McNDUI.exe,mcuihost.exe,mcupdui.exe,MvsVista.exe,msksrver.exe,mskxagnt.exe,McUpdUtl.exe,mcoemmgr.exe,mclgview.exe,McENUI.exe,McpAdmin.exe,MpfAlert.exe,QcConsol.exe,ShrCL.exe,mcinfo.exe,mcsvrcnt.exe,mcsync.exe,mcui.exe,mcagent.exe,mcuninst.exe,mcupdmgr.exe,mispreg.exe,McSmtFwk.exe,mcappcfg.exe,McInsUpd.exe,mcods.exe,McVsMap.exe,McVsShld.exe,MVsInst.exe,xperf.exe,xbootmgr.exe,TrustedInstaller.exe,TVEnhance.exe,TVECapSvc.exe,Toaster.exe,Nobuagent.exe,CyCplo.exe,CyHidWin.exe
+HKLM,Software\McAfee\SystemCore\VSCore\Script Scanner,"IncludedProcesses",65536,iexplore.exe
+HKLM,Software\McAfee\SystemCore\VSCore\Script Scanner,"IncludedProcesses",65544,firefox.exe
+HKLM,Software\McAfee\SystemCore\VSCore\Script Scanner,"ExcludedProcesses",65536,mcshell.exe,mcujgui.exe
+
+[Exclusion_Reg]
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\High,"NumExcludeItems",65537,4
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\High,"ExcludedItem_0",,"4|3|MCQ"
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\High,"ExcludedItem_1",,"4|3|BUP"
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\High,"ExcludedItem_2",,"4|3|OST"
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\High,"ExcludedItem_3",,"4|3|PST"
+HKLM,Software\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Low,"NumExcludeItems",65537,0
+HKLM,SOFTWARE\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Low,"bScanIncoming",65537,0
+HKLM,SOFTWARE\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Low,"bScanOutgoing",65537,0
+HKLM,SOFTWARE\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Low,"dwMacroHeuristicsLevel",65537,0
+HKLM,SOFTWARE\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Low,"dwProgramHeuristicsLevel",65537,0
+HKLM,SOFTWARE\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Low,"ScanBackupReads",65537,0
+HKLM,SOFTWARE\McAfee\SystemCore\VSCore\On Access Scanner\McShield\Configuration\Low,"ApplyNVP",65537,0

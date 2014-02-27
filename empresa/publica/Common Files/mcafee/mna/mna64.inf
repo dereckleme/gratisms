@@ -1,0 +1,125 @@
+[Version]
+Signature="$Chicago$"
+AdvancedINF=2.5
+LayoutFile=mna64.inf
+
+[Installer_Config]
+AppID=MNA
+Shared=1
+
+[Env-Var]
+%SELECTED_LCID%=$REG$Key=SOFTWARE\McAfee\MSC\AppInfo\Substitute:Name=lcid
+
+[SourceDisksNames]
+1="MNA Files","",1
+
+[DefaultInstall]
+CopyFiles=MNAFileList
+AddReg=AddRegEntry
+
+
+[DefaultUnInstall]
+DelFiles=MNAFileList
+DelReg=DelRegEntry
+Delreg=HomeNetRoot
+
+
+[MNAFileList]
+McNARgPS.dll,,,65568
+McNAReg.dll,,,65568
+McNASvPS.dll,,,65568
+McNASvc.dll,,,65568
+McNaIns.dll,,,65568
+mna64.inf,,,65568
+McNAVer.dll,,,65568
+McTrstPS.dll,,,65568
+McAltHst.exe,,,65568
+McAltHPS.dll,,,65568
+
+
+[DelRegEntry]
+HKLM,Software\McAfee\HomeNet\MNA
+HKLM,Software\McAfee\MNA
+HKLM,Software\McAfee\NMC
+
+[HomeNetRoot]
+HKLM,Software\McAfee\Homenet
+
+
+[DirIds]
+46000=%33000%\Mcafee\MNA
+46200=%33000%\Mcafee\McSvcHost
+47000=%CommonProgramW6432%\McAfee\MNA
+41111=%windir%\system32
+47100=%CommonProgramW6432%\McAfee\McSvcHost
+
+[Install_NT_X64]
+DefaultInstall=Setup
+NAService=createservice2
+ConfigureNAServ=EXE
+
+[NAService]
+; 131072 (0x00020000L) == STANDARD_RIGHTS_READ
+; 16 == SERVICE_WIN32_OWN_PROCESS
+; 32 == SERVICE_WIN32_SHARE_PROCESS
+; 2 == SERVICE_AUTO_START
+%47100%\McSvHost.exe=McNASvc,McAfee Network Agent,131072,32,2,,RpcSs#mfefire,
+failures=1,1,0
+resetfailcountafterdays=1
+restartserviceafterminutes=1
+DescDLL=%47000%\McNASvc.dll,102
+CommandLine="/McCoreSvc"
+
+[DestinationDirs]   
+MNAFileList=47000
+
+
+[UnInstall_NT]
+DefaultUnInstall=Setup
+NAService=createservice
+Cleanup=DelFolders
+
+[UnInstall_NT_X64]
+DefaultUnInstall=Setup
+NAService=createservice
+Cleanup=DelFolders
+StopService=EXE
+Delreg=HomeNetRoot
+
+[StopService]
+;STOP McNASvc
+%11%\net.exe="stop McNASvc",1,1
+
+[HomeNetRoot]
+HKLM,Software\McAfee\Homenet
+
+[Cleanup]
+%47000%
+%33100%\Mcafee\MNA
+
+
+[Shared_pkg]
+MNA=%47000%\mna64.inf
+
+[ConfigureNAServ]
+%41111%\rundll32.exe="""%47000%\McNaIns.dll"",ConfigureNAService",0
+
+[OCXRegister]
+McNARgPS.dll
+McNAReg.dll
+McNASvPS.dll
+McNASvc.dll
+McNAVer.dll
+McTrstPS.dll
+McAltHst.exe
+McAltHPS.dll
+
+
+[AddRegEntry]
+HKLM,Software\McAfee\HomeNet\MNA,"Install Dir",,"%47000%"
+; Write the path to the LCID folder. Used by NMC version dll to get the versions of the resource DLLs
+HKLM,Software\McAfee\McSvcHost\McCoreSvc,"McNASvc",0x00000000,"{EA72CA73-16A0-4edc-918C-2A36C2989ABF}"
+; Register Version DLL with MSC
+HKLM,Software\McAfee\MSC\Update\Customization\{51E2504E-5ED7-40ab-8313-CBFB09CEF29A},,0x00000000,
+
+

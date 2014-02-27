@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ margin:0px; padding:0px; font-family:'Arial', Helvetica, sans-serif;font-size:13px;}
+a { text-decoration:none; display:block;}
+ul, li { list-style:none; display:inline-block; margin:0px; padding:0px;}
+h2 { text-transform:uppercase;}
+img { border:none;}
+#header { background:#FFF repeat; margin-bottom:25px;}
+#content{ background:#FFF repeat; }
+#footer { background: url(../images/rodape.png) repeat-x #333; margin-top:-70px;}
+/*-----------------MENU TOPO----------------------*/
+#topo_cinza { background:#333 repeat; border-top:4px solid #2f647d; padding-bottom:10px; padding-top:20px; }
+.menu_topo_cinza { width:960px; margin:0 auto;}
+.mn_topo { float:right;}
+ul.mn_topo { margin-top:-15px;}
+ul.mn_topo li { margin-left:10px; text-align:right;}
+ul.mn_topo li a { color:#FFF; font-size:11px; text-transform:uppercase;}
+ul.mn_topo li a:hover { text-decoration:underline;}
+/*-----------------LOGO------------------------*/
+#logo_gratisms { width:970px; margin:0 auto;}
+.logo h1{ background:url(../images/logo.png) no-repeat left; width:187px; height:59px; text-indent:-9999px;}
+.logo h1 a { font-size:50px;  width:187px; height:59px;}
+
+
+/*-------------------MENU PRINCIPAL---------------------------*/
+#menu_principal { border-top:1px solid #ddd;}
+.mn_principal_linha{ width:970px; margin:0 auto; }
+ul.mn_principal {position:relative;}
+ul.mn_principal li { margin-right:20px; margin-top:-10px;  padding:10px 0 10px 0; float:left;}
+ul.mn_principal li a { color:#666; font-size:12px; text-transform:uppercase; margin-right:-20px; text-align:left; padding-left:20px; padding-right:20px; padding-top:10px; padding-bottom:10px;}
+li.mn_home a{ border-top:4px solid #2f647d;}
+li.mn_home a:hover{ border-top:none; border-bottom:4px solid #2f647d; color:#2f647d; }
+li.mn_sms a{ border-top:4px solid #737d2f;}
+li.mn_sms a:hover{  border-top:none;  border-bottom:4px solid #737d2f; color:#737d2f;}
+li.mn_precos a{ border-top:4px solid #e3a103;}
+li.mn_precos a:hover{ border-top:none;  border-bottom:4px solid #e3a103; color:#e3a103;}
+li.mn_desenvolvedor a{ border-top:4px solid #e34203;}
+li.mn_desenvolvedor a:hover{ border-top:none;  border-bottom:4px solid #e34203; color:#e34203;}
+li.mn_contato a{ border-top:4px solid #9576a3;}
+li.mn_contato a:hover{  border-top:none;  border-bottom:4px solid #9576a3; color:#9576a3;}
+/*-------------------BANNER ANIMADO---------------------------*/
+#banner_animado {width:970px; margin:0 auto;}
+.bn_animado { width:610px; height:180px; margin-top:4px; background:#966;}
+/*----------------------WEB SERVICE-----------------------------------*/
+#webservice_header { width:970px; margin:0 auto;}
+.webservice { width:315px; float:right;}
+h2.web_subtitulo { font-size:16px; width:315px; margin-top:-50px; color:#e34203;  border-top:4px solid #e34203; padding-top:10px;}
+p.web_text { font-size:13px; color:#666; line-height:24px; padding:0 20px 0 20px;border:1px solid #ddd; margin-top:20px;padding-top: 10px;}
+
+/*-------------------FORMULARIO DE ENVIO DE SMS---------------------------*/
+#box_linha { border-top:1px solid #ddd;padding-bottom:390px;}
+.box1{ width:970px; margin:0 auto;}
+.form_sms { width:610px; margin-top:-13px;background:#FFF; float:left;  padding:0 0 20px 0;}
+h2.form_subtitulo { font-size:16px; color:#2f647d;  border-top:4px solid #2f647d; padding-top:10px;}
+.formulario_sms { border:1px solid #ddd; width:610px; margin-top:20px; float:left;}
+p.inf_destino, p.suas_inf{ color:#333; font-size:13px; font-weight:bold;}
+input, textarea, select { border-radius:4px; border:1px solid #ddd; padding:10px; color:#666; font-size:12px; text-align:left;}
+select.status_ddd { width:75px; margin-bottom:10px;}
+input.status_num_destino { width:158px; padding:11px;}
+label.status_msg { color:#333; font-size:12px;}
+textarea.status_msg { width:238px; height:57px; font-family:'Arial', Helvetica, sans-serif; margin-top:5px;}
+.formulario_sms_destino { margin-left:25px; width:270px; float:left;}
+.formulario_suas_inf { margin-left:25px; float:left;}
+button.enviar_sms { border-radius:4px; border:none; cursor:pointer; width:260px; background:#2f647d; text-align:center; color:#FFF; font-size:24px; padding-top:10px; padding-bottom:10px;}
+button:hover.enviar_sms { background:#1d475b;} 
+input.status_seu_nome { width:238px;  margin-bottom:10px;}
+input.status_seu_num{ width:158px;}
+.atencao_form { background:#eee; float:left; width:610px; margin-top:30px;}
+p.at_form { color:#333; font-size:14px; font-weight:bold; margin-left:80px;}
+img.attention  { position:absolute; margin-top:-25px; margin-left:10px;}
+/*-----------------PUBLICIDADE 300 X 250----------------------------------*/
+.pub_300x250 {float:right; width:315px;}
+h2.pub_subtitulo { font-size:16px; color:#6b0a93;  border-top:4px solid #6b0a93; padding-top:10px; margin-top:0px;}
+img.publicidade300x250 {  border:1px #DDD solid; padding:5px; margin-top:25px;}
+/*----------------SMS EMPRESA-------------------------------*/
+.box2{ width:970px; margin:-13px auto;}
+.box_empresa{ float:left;}
+h2.empresa_subtitulo{ font-size:16px; color:#2eabc1;  border-top:4px solid #2eabc1; padding-top:10px; margin-left:200px;}
+.inf_empresa {border:1px solid #ddd; float:left;  width:760px; margin-top:20px; margin-left:200px; padding-top: 10px;}
+p.text_empresa { font-size:13px; color:#666; line-height:24px; padding:0 20px 0 20px; margin:0px;}
+img.celular_img { position:absolute; margin-top:-30px;}
+.email_empresa { background:#eee; width:760px; margin-top:30px; float:left;}
+p.text_email { color:#333; font-size:14px; font-weight:bold; float:left; margin-left:10px;}
+a.email_link { color:#2eabc1; font-size:16px; font-weight:bold;  margin-left:3px; float:left; margin-top:12px; text-transform:none;}
+a:hover.email_link { color:#2f647d;}
+img.email_img  { float:left; margin-top:-25px;  margin-left:10px;}
+/*-------------------MENU RODAPE---------------------------*/
+#menu_footer { width:970px; margin:0 auto;}
+mn_rodape {}
+ul.menu_rodape { padding-top:20px; padding-bottom:20px; position:relative; margin-right:55px;}
+ul.menu_rodape li { margin-right:20px; margin-top:7px; display:block}
+ul.menu_rodape li a { color:#fff; font-size:10px; text-transform:uppercase; text-align:left;  }
+ul.menu_rodape li a:hover { text-decoration:underline;}
+li.titulo_mr_rodape { color:#fff;font-size:14px; text-transform:uppercase; text-align:left; font-weight:bold;}
+.facebook_footer img { width:254px; height:187px; padding:30px 0 30px 0;}
+.d_reservados {background:#2f647d; padding-bottom:10px; padding-top:10px; margin:0px;}
+p.direitos_reservados { text-transform:uppercase; font-size:11px; color:#FFF; width:970px;margin:0 auto; }
+
+
+
+
+
